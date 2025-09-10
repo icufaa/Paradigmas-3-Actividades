@@ -1,0 +1,69 @@
+<!--
+REFLEXIÓN PERSONAL - DISEÑO RESPONSIVO
+
+1. DIFERENCIAS EN EXPERIENCIA DE USUARIO:
+- No responsivo: Contenido apretado en móviles, texto muy pequeño, scroll horizontal
+- Responsivo: Se adapta al dispositivo, cajas se apilan en móviles, mejor legibilidad
+
+2. VENTAJAS Y DESVENTAJAS:
+No responsivo: [+]Simple de desarrollar [!] Mala experiencia móvil
+Responsivo:  [+] Mejor UX en todos los dispositivos [!a] Más complejo de desarrollar
+
+3. CASOS DE USO:
+- No responsivo: Dashboards internos, sistemas de escritorio únicamente
+- Responsivo: Sitios web públicos, e-commerce, blogs, portafolios
+- Hoy en día el responsivo es casi obligatorio (60%+ tráfico móvil)
+-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejemplo Responsivo</title>
+<style>
+body { margin: 0; font-family: sans-serif; }
+
+.contenedor {
+    display: flex;
+    flex-direction: row; 
+    gap: 10px;
+    padding: 10px;
+}
+
+.caja {
+    background: lightseagreen;
+    padding: 5%;
+    font-size: 2vw;
+    flex: 1;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .caja {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .caja {
+        font-size: 5vw;
+        padding: 8%;
+    }
+}
+</style>
+</head>
+<body>
+<div class="contenedor">
+    <div class="caja">Este es un diseño responsivo</div>
+    <div class="caja">Este es un diseño responsivo 2.0</div>
+    <div class="caja">Este es un diseño responsivo 3.0</div>
+</div>
+</body>
+</html>

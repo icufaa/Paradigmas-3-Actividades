@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo Adaptativo</title>
+<style>
+body { margin: 0; font-family: sans-serif; }
+.caja { background: lightblue; padding: 20px; }
+
+/* Versión móvil */
+@media (max-width: 480px) {
+.caja { background: lightgreen; font-size: 14px; }
+}
+
+/* Versión tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+.caja { background: lightcoral; font-size: 18px; }
+}
+
+/* Versión desktop */
+@media (min-width: 769px) {
+.caja { background: lightblue; font-size: 22px; }
+}
+
+/* consigna mi pc no llega a 1200xd */
+@media (min-width: 1200px) {
+.caja { background-color: rgb(94, 0, 94); font-size: 28px;}
+}
+</style>
+</head>
+<body>
+<div class="caja">Este es un diseño adaptativo</div>
+</body>
+</html>
