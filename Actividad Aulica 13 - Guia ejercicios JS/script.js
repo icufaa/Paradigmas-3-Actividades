@@ -1,4 +1,4 @@
-document.getElementById("resultado1").innerHTML = "Nombre: Facundo <br>Edad: 24 años ";
+    document.getElementById("resultado1").innerHTML = "Nombre: Facundo <br>Edad: 24 años ";
 
 // variables
 let nombreEmpleado = "Max Verstappen";
@@ -52,4 +52,25 @@ function calcularTotal(){
     let total = precio * cantidad;
     
     document.getElementById("resultado7").innerHTML = "Total= $"+total;
+}
+
+// estructura condicional
+function sacarPromedio(){
+    let nota1 = parseFloat(document.getElementById("numero1").value);
+    let nota2 = parseFloat(document.getElementById("numero2").value);
+    let nota3 = parseFloat(document.getElementById("numero3").value);
+
+    let promedio = (nota1 + nota2 + nota3) / 3;
+
+    if(promedio < 0 || promedio > 10){
+        document.getElementById("resultado8").innerHTML = "Carga bien las notas";
+    }if (promedio >= 8 && promedio <= 10){
+        document.getElementById("resultado8").innerHTML = "Promocionaste: " + promedio;
+    } if (promedio >= 6 && promedio <= 7) {
+        document.getElementById("resultado8").innerHTML = "Regular: " + promedio;
+    } if (promedio < 6 && promedio >= 4) {
+        document.getElementById("resultado8").innerHTML = "Libre: " + promedio;
+    } if (promedio < 4 && promedio > 0 ) {
+        document.getElementById("resultado8").innerHTML = "Recursa3: " + promedio;
+    }
 }
